@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 10 05:32:14 2026
+
+@author: Samruddhimalave
+"""
+
+#List of student marks 
+marks = [75, 82, 90, 68, 95]
+
+# Calculate average marks
+average = sum(marks) 
+len(marks)
+
+# Find topper marks
+topper = max(marks)
+
+# Display results 
+print("Marks:", marks)
+print("Average Marks:", average)
+print("Topper Marks:", topper)
