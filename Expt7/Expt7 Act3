@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 21 11:08:08 2026
+
+@author: Samruddhi Malave 
+"""
+
+class OnlineOrder:
+    def __init__(self, item_name, price, quantity):
+        self.item_name = item_name
+        self.price = price
+        self.quantity = quantity
+
+    def calculate_total(self):
+        return self.price * self.quantity
+
+    def display(self):
+        print("\nOrder Details:")
+        print(f"Item: {self.item_name}")
+        print(f"Price: ₹{self.price}")
+        print(f"Quantity: {self.quantity}")
+        print(f"Total Cost: ₹{self.calculate_total()}")
+
+
+# Example usage
+item = input("Enter item name: ")
+price = float(input("Enter price: "))
+qty = int(input("Enter quantity: "))
+
+order = OnlineOrder(item, price, qty)
+order.display()
