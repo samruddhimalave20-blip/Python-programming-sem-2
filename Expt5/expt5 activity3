@@ -1,0 +1,21 @@
+@author:samruddhimalave
+   """"""
+
+# inventory dictionary
+inventory = {
+    "Pen": 50,
+    "Notebook": 30,
+    "Eraser": 20
+}
+
+# print original inventory
+print("Before adding stock:", inventory)
+
+# add new stock (increase quantity)
+item = "Pen"
+new_stock = 25
+
+inventory[item] += new_stock
+
+# print updated inventory
+print("After adding stock:", inventory)
