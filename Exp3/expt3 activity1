@@ -1,0 +1,17 @@
+@author:samruddhi malave
+   """""""
+
+# Number of copies
+copies = int(input("Enter number of receipt copies: "))
+
+# Number of items
+items = int(input("Enter number of items: "))
+
+# Nested loops
+for i in range(1, copies + 1):
+    print("Receipt Copy:", i)
+    
+    for j in range(1, items + 1):
+        print("Item Number:", j)
+    
+    print()  # blank line between copies
