@@ -1,0 +1,8 @@
+# Input speed from user
+speed = int(input("Enter your speed (km/h): "))
+
+# Check condition
+if speed > 60:
+    print("You are overspeeding! Fine will be applied.")
+else:
+    print("You are driving within the speed limit.")
