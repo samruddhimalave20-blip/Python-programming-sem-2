@@ -1,0 +1,20 @@
+@author:samruddhimalave
+    """""""
+    # create dictionary
+books = {
+    "Python Basics": 300,
+    "Data Science": 500,
+    "AI Guide": 700
+}
+
+# print original dictionary
+print("Before update:", books)
+
+# update price of a book
+book_name = "Data Science"
+new_price = 550
+
+books[book_name] = new_price
+
+# print updated dictionary
+print("After update:", books)
