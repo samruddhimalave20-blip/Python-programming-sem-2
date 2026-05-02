@@ -1,0 +1,20 @@
+@author:samruddhimalave
+  """"""
+
+def split_bill():
+    try:
+        total_bill = float(input("Enter total bill amount: "))
+        people = int(input("Enter number of people: "))
+
+        if people <= 0:
+            print("Error! Number of people must be greater than 0.")
+        else:
+            share = total_bill / people
+            print("Each person should pay:", share)
+
+    except ValueError:
+        print("Invalid input! Please enter numbers only.")
+
+
+# Call function
+split_bill()
