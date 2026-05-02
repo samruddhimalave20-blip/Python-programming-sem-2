@@ -1,0 +1,16 @@
+@author:samruddhimalave
+  """"""
+
+# Initial balance
+balance = 5000  
+
+# User input
+withdraw_amount = float(input("Enter amount to withdraw: "))
+
+# Check conditions
+if withdraw_amount <= balance:
+    balance -= withdraw_amount
+    print("Withdrawal successful!")
+    print("Remaining balance:", balance)
+else:
+    print("Insufficient balance! Transaction failed.")
