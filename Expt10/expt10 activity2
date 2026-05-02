@@ -1,0 +1,29 @@
+@author:samruddhimalave
+   """"""
+import streamlit as st
+
+st.title(" BMI Health Checker")
+
+st.write("Enter your details:")
+
+# User inputs
+weight = st.number_input("Enter weight (kg)", min_value=1.0)
+height = st.number_input("Enter height (meters)", min_value=0.1)
+
+# Calculate BMI
+if st.button("Check BMI"):
+    if height > 0:
+        bmi = weight / (height ** 2)
+        st.success(f"Your BMI is: {round(bmi, 2)}")
+
+        # BMI Category
+        if bmi < 18.5:
+            st.info("Category: Underweight")
+        elif 18.5 <= bmi < 24.9:
+            st.info("Category: Normal weight")
+        elif 25 <= bmi < 29.9:
+            st.warning("Category: Overweight")
+        else:
+            st.error("Category: Obese")
+    else:
+        st.error("Height must be greater than 0")
