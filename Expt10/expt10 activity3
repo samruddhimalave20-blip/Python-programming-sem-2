@@ -1,0 +1,34 @@
+@author:samruddhimalave
+   """"""
+import streamlit as st
+
+st.title(" Student Result Calculator")
+
+st.write("Enter marks for 5 subjects:")
+
+# Input marks
+sub1 = st.number_input("Subject 1", min_value=0, max_value=100)
+sub2 = st.number_input("Subject 2", min_value=0, max_value=100)
+sub3 = st.number_input("Subject 3", min_value=0, max_value=100)
+sub4 = st.number_input("Subject 4", min_value=0, max_value=100)
+sub5 = st.number_input("Subject 5", min_value=0, max_value=100)
+
+# Calculate result
+if st.button("Calculate Result"):
+    total = sub1 + sub2 + sub3 + sub4 + sub5
+    percentage = total / 5
+
+    st.success(f"Total Marks: {total}")
+    st.success(f"Percentage: {percentage:.2f}%")
+
+    # Grade calculation
+    if percentage >= 90:
+        st.info("Grade: A+")
+    elif percentage >= 75:
+        st.info("Grade: A")
+    elif percentage >= 60:
+        st.info("Grade: B")
+    elif percentage >= 50:
+        st.warning("Grade: C")
+    else:
+        st.error("Grade: Fail")
