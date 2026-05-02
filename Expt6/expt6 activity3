@@ -1,0 +1,14 @@
+@author:samruddhimalave
+   """"""
+# Open the complaint file in read mode
+file = open("complaints.txt", "r")
+
+# Read all contents
+complaints = file.read()
+
+# Display complaints
+print("All Complaints:\n")
+print(complaints)
+
+# Close the file
+file.close()
