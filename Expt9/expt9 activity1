@@ -1,0 +1,25 @@
+@author:samruddhimalave
+  """"""
+  import math
+
+# Input values
+principal = float(input("Enter loan amount: "))
+annual_rate = float(input("Enter annual interest rate (%): "))
+years = int(input("Enter loan tenure (years): "))
+
+# Convert values
+monthly_rate = annual_rate / (12 * 100)
+months = years * 12
+
+# EMI Calculation
+emi = (principal * monthly_rate * math.pow(1 + monthly_rate, months)) / \
+      (math.pow(1 + monthly_rate, months) - 1)
+
+# Total payment and interest
+total_payment = emi * months
+total_interest = total_payment - principal
+
+# Output
+print("Monthly EMI: ₹", round(emi, 2))
+print("Total Payment: ₹", round(total_payment, 2))
+print("Total Interest: ₹", round(total_interest, 2))
