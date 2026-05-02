@@ -1,0 +1,22 @@
+@author:samruddhimalave
+   """"""
+
+def register_user():
+    name = input("Enter your name: ")
+
+    try:
+        age = int(input("Enter your age: "))
+
+        if age <= 0:
+            print("Invalid age! Age must be greater than 0.")
+        elif age < 18:
+            print("Registration failed! You must be at least 18 years old.")
+        else:
+            print("Registration successful!")
+
+    except ValueError:
+        print("Invalid input! Please enter a valid number for age.")
+
+
+# Call function
+register_user()
