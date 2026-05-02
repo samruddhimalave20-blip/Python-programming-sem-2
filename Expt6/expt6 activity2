@@ -1,0 +1,18 @@
+@author:samruddhimalave
+    """"""
+
+# Open file in append mode (creates file if not exists)
+file = open("attendance.txt", "a")
+
+# Take input
+roll_no = input("Enter Roll Number: ")
+name = input("Enter Name: ")
+status = input("Enter Attendance (Present/Absent): ")
+
+# Write data to file
+file.write(roll_no + " " + name + " " + status + "\n")
+
+# Close file
+file.close()
+
+print("Record added successfully!")
