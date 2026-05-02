@@ -1,0 +1,23 @@
+@author:samruddhimalave
+    """"""
+
+# Step 1: Add daily expenses to file
+file = open("expenses.txt", "a")
+
+day = input("Enter day: ")
+amount = float(input("Enter expense amount: "))
+
+file.write(day + " " + str(amount) + "\n")
+file.close()
+
+# Step 2: Read file and calculate total
+file = open("expenses.txt", "r")
+total = 0
+
+for line in file:
+    parts = line.split()
+    total += float(parts[1])
+
+file.close()
+
+print("Total Monthly Expense:", total)
